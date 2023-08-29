@@ -108,6 +108,8 @@ Temperature won't change.
   - WaterMixFahrenheit as derived class? etc.
 - catch temperature below zero?
   - must use defined liquid and temp scale.
+- library can be used for water and salinity too
+  - other linear related things.
 
 #### Wont
 

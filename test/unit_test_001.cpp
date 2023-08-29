@@ -64,7 +64,7 @@ unittest(test_add_sub)
   assertEqualFloat(200, WM.volume(), 0.01);
   assertEqualFloat(15, WM.temperature(), 0.01);
   
-  WM.add(50);
+  WM.sub(50);
   assertEqualFloat(150, WM.volume(), 0.01);
   assertEqualFloat(15, WM.temperature(), 0.01);
 }
