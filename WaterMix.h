@@ -2,7 +2,7 @@
 //
 //    FILE: WaterMix.h
 //  AUTHOR: Rob Tillaart
-// PURPOSE: Arduino library for mixing water
+// PURPOSE: Arduino library for mixing water of different temperatures.
 // VERSION: 0.1.0
 //     URL: https://github.com/RobTillaart/WaterMix
 
@@ -32,16 +32,23 @@ public:
 
   void add(float volume, float temperature)
   {
+    if (volume <= 0) return;  //  false ?
     float vol = _volume + volume;
-    float temp = (_volume * _temperature + volume * temperature) / vol;
+    _temperature = (_volume * _temperature + volume * temperature) / vol;
     _volume = vol;
-    _temperature = temp;
+  }
+
+
+  void add(WaterMix &wm)
+  {
+    add(wm.volume(), wm.temperature());
   }
 
 
   void sub(float volume)
   {
     _volume -= volume;
+    if (_volume <= 0) _volume = 0;
     //  temperature does not change.
   }
 
@@ -49,6 +56,13 @@ public:
   void div(float nr)
   {
     _volume /= nr;
+    //  temperature does not change.
+  }
+
+
+  void mul(float nr)
+  {
+    _volume *= nr;
     //  temperature does not change.
   }
 
