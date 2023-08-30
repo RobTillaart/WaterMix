@@ -16,7 +16,7 @@ Arduino library for mixing water with different temperatures.
 
 ## Description
 
-**Warning: Experimental, use at your own risk**
+**Warning: Experimental**
 
 Experimental library for elementary math of mixing water with different temperatures.
 
@@ -37,9 +37,8 @@ Fahrenheit or other.
 However you must use the chosen units consistently as you cannot use different
 units simultaneously. Check **Temperature** library below.
 
-This library is not meant for serious applications so **use at your own risk**.
-That said it could be useful e.g. by doing "water math" for aquaria or cooking.
-Finally the library is well suited for basic educational purposes.
+This library could be useful e.g. by doing "water math" for aquaria or cooking.
+Also the library is well suited for basic educational purposes.
 
 
 #### Accuracy
@@ -62,8 +61,9 @@ TODO:
 
 #### Related
 
-- https://github.com/RobTillaart/VolumeConverter
 - https://github.com/RobTillaart/Temperature
+- https://github.com/RobTillaart/VolumeConverter
+- https://github.com/RobTillaart/weight
 
 
 ## Interface
