@@ -1,7 +1,7 @@
 {
   "name": "WaterMix",
   "keywords": "water, mix, liters, temperature",
-  "description": "Arduino library for mixing water of different temperatures.",
+  "description": "Arduino library for mixing water with different temperatures.",
   "authors":
   [
     {

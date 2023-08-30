@@ -2,7 +2,7 @@
 //
 //    FILE: WaterMix.h
 //  AUTHOR: Rob Tillaart
-// PURPOSE: Arduino library for mixing water of different temperatures.
+// PURPOSE: Arduino library for mixing water with different temperatures.
 // VERSION: 0.1.0
 //     URL: https://github.com/RobTillaart/WaterMix
 
