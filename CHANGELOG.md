@@ -6,9 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [0.1.4] - 2025-02-20
+- add library version to examples
+- minor edits
+
+
 ## [0.1.3] - 2023-11-23
 - update readme.md
-
 
 ## [0.1.2] - 2023-09-08
 - add base class **LiquidMix** (moved functions up)
