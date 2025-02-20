@@ -34,10 +34,13 @@ public:
 
   void add(float volume, float temperature)
   {
-    if (volume <= 0) return;  //  false ?
-    float vol = _volume + volume;
-    _temperature = (_volume * _temperature + volume * temperature) / vol;
-    _volume = vol;
+    float newVolume = _volume + volume;
+    if (newVolume > 0)
+    {
+      _temperature = (_volume * _temperature + volume * temperature) / newVolume;
+    }
+    if (newVolume < 0) newVolume = 0;
+    _volume = newVolume;
   }
 
   void add(LiquidMix &lm)
@@ -52,15 +55,15 @@ public:
     //  temperature does not change.
   }
 
-  void div(float nr)
+  void div(float number)
   {
-    _volume /= nr;
+    _volume /= number;
     //  temperature does not change.
   }
 
-  void mul(float nr)
+  void mul(float number)
   {
-    _volume *= nr;
+    _volume *= number;
     //  temperature does not change.
   }
 

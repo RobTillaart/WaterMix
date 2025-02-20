@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [0.1.4] - 2025-02-20
-- add library version to examples
+- add print library version to examples
+- allows to add "negative" volumes to subtract an amount
+  as long as the result >= 0. Constrains the volume to 0.
 - minor edits
 
 

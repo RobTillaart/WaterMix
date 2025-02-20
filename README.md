@@ -49,14 +49,19 @@ If you have requests, questions or ideas, let me know by opening an issue.
 By adding the LiquidMix base class the library allows easy derived classes
 like the WaterMix.
 
-#### Limitations
+### Limitations
 
 The **LiquidMix** uses a generic volume parameter instead of gallons or liters as
 this way any user selected unit can be used.
 However you must use the chosen units consistently as the library cannot handle
 different units simultaneously.
 To use different units for volume you can convert them with the library named
-**VolumeConverter**.
+**VolumeConverter**. See related below.
+
+The same is true for the temperature parameter. One should use the same scale,
+Kelvin, Fahrenheit or Celsius consistently.
+To use different units for temperature you can convert them with the library named
+**Temperature**. See related below.
 
 For the **LiquidMix** the temperature unit can also be chosen by the user and
 can be Kelvin, Celsius, Fahrenheit or other.
@@ -67,7 +72,7 @@ The **WaterMix** class must use the **Celsius** scale as the **density()** funct
 used is defined in degrees Celsius.
 
 
-#### Accuracy
+### Accuracy
 
 The working range for temperature is not tested e.g. with real water.
 It is expected to work quite well for water with a range from 5°C to 80°C.
@@ -86,7 +91,7 @@ the density of the water at a given temperature.
 This function is much slower but will provide a more exact answer.
 
 
-#### Related
+### Related
 
 - https://github.com/RobTillaart/Temperature
 - https://github.com/RobTillaart/VolumeConverter
@@ -99,7 +104,7 @@ This function is much slower but will provide a more exact answer.
 #include "WaterMix.h"
 ```
 
-#### LiquidMix (base class)
+### LiquidMix (base class)
 
 To be used with any liquid.
 
@@ -110,13 +115,13 @@ sets initial values, default no liquid of 0°.
 with temperature to the "LiquidMix".
 - **void sub(float volume)** subtract a volume from the "LiquidMix".
 Temperature won't change.
-- **void div(float nr)** divide the amount of liquid, same temperature.
-- **void mul(float nr)** multiply the amount of liquid, same temperature.
+- **void div(float number)** divide the amount of liquid, same temperature.
+- **void mul(float number)** multiply the amount of liquid, same temperature.
 - **float volume()** get the current volume.
 - **float temperature()** get the current temperature.
 
 
-#### WaterMix
+### WaterMix
 
 WaterMix is specific for water and has the following additional functions:
 
@@ -173,7 +178,7 @@ calculated in this library will differ from reality due to the VCE effect.
 This difference depends on the liquid used and the delta temperature.
 
 
-#### Water
+### Water
 
 The VCE of water depends on the temperature.
 
@@ -205,7 +210,7 @@ Source: - https://www.engineeringtoolbox.com/water-density-specific-weight-d_595
 |    100    |  0,9583500  |  4,3434    |  7.03   |
 
 
-#### Other liquids
+### Other liquids
 
 Unknown if these liquids are expanding linear or not.
 
@@ -264,7 +269,7 @@ Source: - https://www.engineeringtoolbox.com/cubical-expansion-coefficients-d_12
   should be to reach a certain temperature.
   - Think Aquaria or cooking.
 - investigate how to mix different liquids?
-  - gives too much params
+  - gives too much parameters
 - use double instead of float?
   - weight and temperature are not that accurate (assumption)
 - investigate the caching of the mass of the water.
